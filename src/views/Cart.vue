@@ -51,7 +51,7 @@
                     num: "2",
                     product_name: "小米电视4A",
                     salePrice: "4499",
-                },{
+                }, {
                     commodity_id: "1234567890",
                     goodsId: "0123456789",
                     goodsUrl: "//mi.com",
@@ -59,7 +59,7 @@
                     num: "2",
                     product_name: "小米电视5A",
                     salePrice: "5499",
-                },{
+                }, {
                     commodity_id: "1234567890",
                     goodsId: "0123456789",
                     goodsUrl: "//mi.com",
@@ -129,6 +129,10 @@
         font-size: 16px;
     }
 
+    .list-total {
+        text-align: right;
+    }
+
     .item-box {
         padding: 15px 26px 15px 0;
         border-top: 1px solid #e0e0e0;
@@ -136,6 +140,10 @@
         .col-action {
             color: red;
             cursor: pointer;
+
+            span {
+                margin-right: 6px;
+            }
         }
 
         .col-total {

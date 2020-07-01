@@ -27,6 +27,7 @@ const routes = [
     path: '/lifecycle',
     name: 'Lifecycle',
     component: Lifecycle,
+    meta: { keepAlive: true }
   },
   {
     path: '/about',

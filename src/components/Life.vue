@@ -2,7 +2,7 @@
     <div class="life">
         <h1>{{ msg }}</h1>
         <p>
-            我是子组件
+            {{message}}
         </p>
     </div>
 </template>
@@ -12,6 +12,11 @@
         name: 'life',
         props: {
             msg: String
+        },
+         data() {
+            return {
+                message: "我是子组件",
+            }
         },
         beforeCreate() {
             console.group('------beforeCreate创建前状态------');

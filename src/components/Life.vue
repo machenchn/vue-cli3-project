@@ -1,19 +1,19 @@
 <template>
-  <div class="life">
-    <h1>{{ msg }}</h1>
-    <p>
-      我是子组件
-    </p>
-  </div>
+    <div class="life">
+        <h1>{{ msg }}</h1>
+        <p>
+            我是子组件
+        </p>
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'life',
-  props: {
-    msg: String
-  },
-  beforeCreate() {
+    export default {
+        name: 'life',
+        props: {
+            msg: String
+        },
+        beforeCreate() {
             console.group('------beforeCreate创建前状态------');
             console.log("%c%s", "color:red", "el     : " + this.$el); //undefined
             console.log("%c%s", "color:red", "data   : " + this.$data); //undefined 
@@ -81,7 +81,7 @@ export default {
             console.log("%c%s", "color:red", "data   : " + this.$data);
             console.log("%c%s", "color:red", "message: " + this.message)
         },
-  
-}
-</script>
 
+    }
+
+</script>

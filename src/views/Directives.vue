@@ -16,7 +16,6 @@
         <p @click="changeText1">修改text1</p>
         <input v-model="text1">
     </div>
-    </div>
 </template>
 
 <script>
@@ -42,6 +41,15 @@
         computed: {
         },
         components: {},
+        beforeCreate() {
+            
+        },
+        created() {
+            
+        },
+        mounted() {
+            
+        },
         methods: {
             changeText1() {
                 this.text1 = "Hello Word"

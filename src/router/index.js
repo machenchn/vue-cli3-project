@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Cart from '../views/Cart.vue';
 import Directives from '../views/Directives.vue';
+import Lifecycle from '../views/Lifecycle.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/directives',
     name: 'Directives',
     component: Directives,
+  },
+  {
+    path: '/lifecycle',
+    name: 'Lifecycle',
+    component: Lifecycle,
   },
   {
     path: '/about',

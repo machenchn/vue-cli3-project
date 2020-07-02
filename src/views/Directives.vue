@@ -14,7 +14,12 @@
         <p v-for="(item, key) in text1">{{key}} : {{item}}</p>
         -->
         <p @click="changeText1">修改text1</p>
+        <div v-on:mouseenter="showChild" @mouseleave="hideChild">
+            展示子节点
+            <span v-if="isChildShow"> 鼠标移入</span>
+        </div>
         <input v-model="text1">
+        <p :style="{'color': isChildShow ? 'red':'blue'}">动态属性</p>
     </div>
 </template>
 
@@ -36,6 +41,7 @@
                     "value3":"数据三",
                     "value4":"数据四",
                 },
+                isChildShow: false,
             }
         },
         computed: {
@@ -51,6 +57,12 @@
             
         },
         methods: {
+            showChild() {
+                this.isChildShow = true;
+            },
+            hideChild() {
+                this.isChildShow = false;
+            },
             changeText1() {
                 this.text1 = "Hello Word"
             },

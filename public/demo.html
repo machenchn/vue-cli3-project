@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN" xml:lang="zh-CN">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta charset="UTF-8" />
+	<title>vue-demo</title>
+</head>
+
+<body>
+	<div id="mycontent">
+		<p>{{name}}</p>
+	<button v-on:click="modifyInfo" >{{btntext}}</button>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	var vm = new Vue({
+		el: "#mycontent",
+		data:{
+			name:"欢迎预约小米10!",
+			btntext:"预约"
+		},
+		methods:{
+			modifyInfo:function(){
+				this.name = "敬请期待~";
+				this.btntext = "您已预约";
+			}
+		}
+	})
+</script>
+</body>
+</html>

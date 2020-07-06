@@ -67,7 +67,27 @@
                     num: "2",
                     product_name: "小米电视6A",
                     salePrice: "6499",
+                    searchValue: '',
                 }]
+            }
+        },
+        watch: {
+            // searchValue(newValue, oldValue) {
+            //     if(newValue !== oldValue) {
+            //         this.updateSearch(newValue);
+            //     }
+            // },
+            searchValue: {
+                 // 通过handler来监听属性变化, 初次调用 newValue为""空字符串， oldValue为 undefined
+                handler(newValue, oldValue) {
+                    if(newValue !== oldValue) {
+                        this.updateSearch(newValue);
+                    }
+                },
+                 // 配置立即执行属性
+                immediate: true,
+                // 通过指定deep属性为true, watch会监听对象里面每一个值的变化
+                deep: true
             }
         },
         computed: {
@@ -88,6 +108,9 @@
         },
         components: {},
         methods: {
+            updateSearch(value) {
+
+            },
             add(item) {
                 item.num = parseInt(item.num) + 1;
             },

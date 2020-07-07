@@ -4,6 +4,7 @@
         <p>
             {{message}}
         </p>
+        <button @click="changeMessage">修改message</button>
     </div>
 </template>
 
@@ -13,9 +14,14 @@
         props: {
             msg: String
         },
-         data() {
+        data() {
             return {
                 message: "我是子组件",
+            }
+        },
+        methods: {
+            changeMessage() {
+              this.message = '子组件触发updata';
             }
         },
         beforeCreate() {
@@ -35,7 +41,7 @@
             console.log("%c%s", "color:red", "el     : " + (this.$el)); //已被初始化
             console.log(this.$el);
             console.log("%c%s", "color:red", "data   : " + JSON.stringify(this.$data)); //已被初始化  
-            console.log("%c%s", "color:red", "message: " + this.message); //已被初始化  
+            console.log("%c%s", "color:red", "message: " + this.message); //已被初始化
         },
         mounted() {
             console.group('------mounted 挂载结束状态------');
